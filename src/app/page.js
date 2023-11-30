@@ -7,45 +7,11 @@ import GraphVisualization from '@/components/GraphVisualization';
 import CheckboxComponent from '@/components/CheckboxComponent';
 import session from '@/utils/neo4j'; // Importa el cliente Neo4j
 import neo4jDriver from '@/utils/neo4j';
+import NavBar from "@/components/Navbar";
+import FooterN from '@/components/footer'
 
 
 function HomePage(){
-  //Another CheckBox
-  const [selectedCheckboxes, setSelectedCheckboxes] = useState({});
-
-  const anotherHandleBox = async (checkboxValues) => {
-    try {
-      // Conectar a Neo4j usando el driver
-      const session = neo4jDriver.session();
-      // Construir y ejecutar consultas según las selecciones de checkboxes
-      const cypherQuery = buildCypherQuery(checkboxValues);
-      const result = await session.run(cypherQuery);
-      // Procesar el resultado de la consulta
-      console.log('Neo4j query result:', result.records);
-      // Cerrar la sesión de Neo4j
-      session.close();
-    } catch (error) {
-      console.error('Error executing Neo4j query:', error);
-    }
-  };
-  const buildCypherQuery = (checkboxValues) => {
-    // Construir la consulta Cypher según las selecciones de checkboxes
-    // Este es solo un ejemplo, deberías ajustar según tu modelo de datos y lógica
-    const checkboxes = Object.keys(checkboxValues).filter(
-      (checkbox) => checkboxValues[checkbox]
-    );
-
-    const cypherQuery = `
-      MATCH (n:Node)-[:RELATIONSHIP]->(m:Node)
-      WHERE n.property IN [${checkboxes.map((checkbox) => `"${checkbox}"`).join(', ')}]
-      RETURN n, m
-    `;
-
-    return cypherQuery;
-  };
-
-
-
   //Check-Box
   const [isChecked, setIsChecked] = useState(false);
   const [resultData, setResultData] = useState(null);
@@ -74,10 +40,7 @@ function HomePage(){
   return(
     // <div>HomePage</div>
     <section>
-      <div>
-        <h1>Next.js Neo4j Integration</h1>
-        <CheckboxComponent onCheckboxChange={anotherHandleBox} />
-      </div>
+      <NavBar></NavBar>
       {/* <div>
         <h1>Visualización del Grafo Neo4j</h1>
         <GraphVisualization containerId="graph-container" />
@@ -103,6 +66,7 @@ function HomePage(){
           </div>
         )}
       </div>
+      <FooterN></FooterN>
     </section>
     // ,<div>Hola</div>,
     // 
