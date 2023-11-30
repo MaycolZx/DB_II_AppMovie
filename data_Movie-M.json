@@ -1,0 +1,1175 @@
+{
+  "version": "1.2.0-beta.0",
+  "graph": {
+    "nodes": [
+      {
+        "id": "n0",
+        "position": {
+          "x": 492.71091802961297,
+          "y": 151.33372347511153
+        },
+        "caption": "Pelicula"
+      },
+      {
+        "id": "n2",
+        "position": {
+          "x": 272.9340595589723,
+          "y": -159.28557702460233
+        },
+        "caption": "Director"
+      },
+      {
+        "id": "n3",
+        "position": {
+          "x": 452.4051801775696,
+          "y": 433.3673971626606
+        },
+        "caption": "Empresa"
+      },
+      {
+        "id": "n4",
+        "position": {
+          "x": 704.432160019747,
+          "y": 371.43727012359307
+        },
+        "caption": "Clasificacion"
+      },
+      {
+        "id": "n5",
+        "position": {
+          "x": 712.4877765002536,
+          "y": -159.28557702460228
+        },
+        "caption": "Premios"
+      },
+      {
+        "id": "n6",
+        "position": {
+          "x": 189.13192918553437,
+          "y": 117.99826053409366
+        },
+        "caption": "Pais"
+      },
+      {
+        "id": "n7",
+        "position": {
+          "x": 492.71091802961297,
+          "y": -159.28557702460233
+        },
+        "caption": "Genero"
+      },
+      {
+        "id": "n17",
+        "position": {
+          "x": 189.13192918553437,
+          "y": 313.61018167300193
+        },
+        "caption": "Idiomas"
+      },
+      {
+        "id": "n18",
+        "position": {
+          "x": 775.6531250401623,
+          "y": 117.99826053409366
+        },
+        "caption": "Reparto"
+      }
+    ],
+    "relationships": [
+      {
+        "id": "n11",
+        "type": "CLASIFICADA_COMO",
+        "fromId": "n0",
+        "toId": "n4"
+      },
+      {
+        "id": "n12",
+        "type": "PRODUCIDA_POR",
+        "fromId": "n0",
+        "toId": "n3"
+      },
+      {
+        "id": "n13",
+        "type": "PRODUCIDA_EN",
+        "fromId": "n0",
+        "toId": "n6"
+      },
+      {
+        "id": "n14",
+        "type": "DIRIGIDA_POR",
+        "fromId": "n0",
+        "toId": "n2"
+      },
+      {
+        "id": "n15",
+        "type": "ESPECIALIZADO_EN",
+        "fromId": "n2",
+        "toId": "n7"
+      },
+      {
+        "id": "n16",
+        "type": "PERTENECE_A",
+        "fromId": "n0",
+        "toId": "n7"
+      },
+      {
+        "id": "n29",
+        "type": "ESTA_EN",
+        "fromId": "n0",
+        "toId": "n17"
+      },
+      {
+        "id": "n39",
+        "type": "GANO_UN",
+        "fromId": "n0",
+        "toId": "n5"
+      },
+      {
+        "id": "n41",
+        "type": "ASOCIADO_A",
+        "fromId": "n7",
+        "toId": "n5"
+      },
+      {
+        "id": "n42",
+        "type": "PARTE_DE",
+        "fromId": "n18",
+        "toId": "n0"
+      }
+    ]
+  },
+  "dataModel": {
+    "version": "1.2.0-beta.0",
+    "graphSchemaRepresentation": {
+      "version": "1.0.0",
+      "graphSchema": {
+        "nodeLabels": [
+          {
+            "$id": "nl:n0",
+            "token": "Pelicula"
+          },
+          {
+            "$id": "nl:n2",
+            "token": "Director"
+          },
+          {
+            "$id": "nl:n3",
+            "token": "Empresa"
+          },
+          {
+            "$id": "nl:n4",
+            "token": "Clasificacion"
+          },
+          {
+            "$id": "nl:n5",
+            "token": "Premios"
+          },
+          {
+            "$id": "nl:n6",
+            "token": "Pais"
+          },
+          {
+            "$id": "nl:n7",
+            "token": "Genero"
+          },
+          {
+            "$id": "nl:n17",
+            "token": "Idiomas"
+          },
+          {
+            "$id": "nl:n18",
+            "token": "Reparto"
+          }
+        ],
+        "relationshipTypes": [
+          {
+            "$id": "rt:n11",
+            "token": "CLASIFICADA_COMO"
+          },
+          {
+            "$id": "rt:n12",
+            "token": "PRODUCIDA_POR"
+          },
+          {
+            "$id": "rt:n13",
+            "token": "PRODUCIDA_EN"
+          },
+          {
+            "$id": "rt:n14",
+            "token": "DIRIGIDA_POR"
+          },
+          {
+            "$id": "rt:n15",
+            "token": "ESPECIALIZADO_EN"
+          },
+          {
+            "$id": "rt:n16",
+            "token": "PERTENECE_A"
+          },
+          {
+            "$id": "rt:n29",
+            "token": "ESTA_EN"
+          },
+          {
+            "$id": "rt:n39",
+            "token": "GANO_UN"
+          },
+          {
+            "$id": "rt:n41",
+            "token": "ASOCIADO_A"
+          },
+          {
+            "$id": "rt:n42",
+            "token": "PARTE_DE"
+          }
+        ],
+        "nodeObjectTypes": [
+          {
+            "$id": "n:n0",
+            "labels": [
+              {
+                "$ref": "#nl:n0"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:1",
+                "token": "P1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:9",
+                "token": "P2",
+                "type": {
+                  "type": "integer"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:10",
+                "token": "P3",
+                "type": {
+                  "type": "float"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:11",
+                "token": "P4",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:12",
+                "token": "P5",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n2",
+            "labels": [
+              {
+                "$ref": "#nl:n2"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:7",
+                "token": "D1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n3",
+            "labels": [
+              {
+                "$ref": "#nl:n3"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:5",
+                "token": "E1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n4",
+            "labels": [
+              {
+                "$ref": "#nl:n4"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:4",
+                "token": "C1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n5",
+            "labels": [
+              {
+                "$ref": "#nl:n5"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:3",
+                "token": "PE1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n6",
+            "labels": [
+              {
+                "$ref": "#nl:n6"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:6",
+                "token": "PA1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n7",
+            "labels": [
+              {
+                "$ref": "#nl:n7"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:2",
+                "token": "GE1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:20",
+                "token": "Property 2",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n17",
+            "labels": [
+              {
+                "$ref": "#nl:n17"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:22",
+                "token": "E1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          },
+          {
+            "$id": "n:n18",
+            "labels": [
+              {
+                "$ref": "#nl:n18"
+              }
+            ],
+            "properties": [
+              {
+                "$id": "p:14",
+                "token": "R1",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:15",
+                "token": "R2",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:16",
+                "token": "R3",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:17",
+                "token": "R4",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:18",
+                "token": "R5",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              },
+              {
+                "$id": "p:19",
+                "token": "R6",
+                "type": {
+                  "type": "string"
+                },
+                "nullable": true
+              }
+            ]
+          }
+        ],
+        "relationshipObjectTypes": [
+          {
+            "$id": "r:n11",
+            "type": {
+              "$ref": "#rt:n11"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n4"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n12",
+            "type": {
+              "$ref": "#rt:n12"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n3"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n13",
+            "type": {
+              "$ref": "#rt:n13"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n6"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n14",
+            "type": {
+              "$ref": "#rt:n14"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n2"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n15",
+            "type": {
+              "$ref": "#rt:n15"
+            },
+            "from": {
+              "$ref": "#n:n2"
+            },
+            "to": {
+              "$ref": "#n:n7"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n16",
+            "type": {
+              "$ref": "#rt:n16"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n7"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n29",
+            "type": {
+              "$ref": "#rt:n29"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n17"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n39",
+            "type": {
+              "$ref": "#rt:n39"
+            },
+            "from": {
+              "$ref": "#n:n0"
+            },
+            "to": {
+              "$ref": "#n:n5"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n41",
+            "type": {
+              "$ref": "#rt:n41"
+            },
+            "from": {
+              "$ref": "#n:n7"
+            },
+            "to": {
+              "$ref": "#n:n5"
+            },
+            "properties": []
+          },
+          {
+            "$id": "r:n42",
+            "type": {
+              "$ref": "#rt:n42"
+            },
+            "from": {
+              "$ref": "#n:n18"
+            },
+            "to": {
+              "$ref": "#n:n0"
+            },
+            "properties": []
+          }
+        ]
+      }
+    },
+    "graphSchemaExtensionsRepresentation": {
+      "nodeKeyProperties": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "keyProperty": {
+            "$ref": "#p:1"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n7"
+          },
+          "keyProperty": {
+            "$ref": "#p:2"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n5"
+          },
+          "keyProperty": {
+            "$ref": "#p:3"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n4"
+          },
+          "keyProperty": {
+            "$ref": "#p:4"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n3"
+          },
+          "keyProperty": {
+            "$ref": "#p:5"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n6"
+          },
+          "keyProperty": {
+            "$ref": "#p:6"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n2"
+          },
+          "keyProperty": {
+            "$ref": "#p:7"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n17"
+          },
+          "keyProperty": {
+            "$ref": "#p:22"
+          }
+        },
+        {
+          "node": {
+            "$ref": "#n:n18"
+          },
+          "keyProperty": {
+            "$ref": "#p:14"
+          }
+        }
+      ]
+    },
+    "graphMappingRepresentation": {
+      "dataSourceSchema": {
+        "type": "local/csv",
+        "tableSchemas": [
+          {
+            "$id": "t:1",
+            "name": "DATASETNODOS[1].csv",
+            "expanded": true,
+            "fields": [
+              {
+                "name": "Titulo",
+                "type": "string",
+                "sample": "Rigor Mortis",
+                "include": true
+              },
+              {
+                "name": "Estreno",
+                "type": "integer",
+                "sample": "2013",
+                "include": true
+              },
+              {
+                "name": "Pais",
+                "type": "string",
+                "sample": "Hong Kong",
+                "include": true
+              },
+              {
+                "name": "Idiomas",
+                "type": "string",
+                "sample": "Chino",
+                "include": true
+              },
+              {
+                "name": "Direccion",
+                "type": "string",
+                "sample": "Juno Mak",
+                "include": true
+              },
+              {
+                "name": "Nota",
+                "type": "float",
+                "sample": "4.8",
+                "include": true
+              },
+              {
+                "name": "Productoras",
+                "type": "string",
+                "sample": "Paramount Pictures",
+                "include": true
+              },
+              {
+                "name": "Clasificacion",
+                "type": "string",
+                "sample": "R",
+                "include": true
+              },
+              {
+                "name": "Duracion",
+                "type": "string",
+                "sample": "120 minutos",
+                "include": true
+              },
+              {
+                "name": "Actor1",
+                "type": "string",
+                "sample": "Chin Siu-Ho",
+                "include": true
+              },
+              {
+                "name": "Actor2",
+                "type": "string",
+                "sample": " Kara Hui",
+                "include": true
+              },
+              {
+                "name": "Actor3",
+                "type": "string",
+                "sample": " Richard Ng",
+                "include": true
+              },
+              {
+                "name": "Actor4",
+                "type": "string",
+                "sample": " Anthony Chan",
+                "include": true
+              },
+              {
+                "name": "Actor5",
+                "type": "string",
+                "sample": " Lo Hoi-Pang",
+                "include": true
+              },
+              {
+                "name": "Actor6",
+                "type": "string",
+                "sample": " Nina Paw",
+                "include": true
+              },
+              {
+                "name": "Premios",
+                "type": "string",
+                "sample": "",
+                "include": true
+              },
+              {
+                "name": "Sinopsis",
+                "type": "string",
+                "sample": "Nulla justo. Aliquam quis turpis eget elit sodales scelerisque. Mauris sit amet eros. Suspendisse accumsan tortor quis turpis.",
+                "include": true
+              },
+              {
+                "name": "Genero1",
+                "type": "string",
+                "sample": "Acci�n",
+                "include": true
+              },
+              {
+                "name": "Genero2",
+                "type": "string",
+                "sample": " Fant�stico",
+                "include": true
+              }
+            ]
+          }
+        ]
+      },
+      "nodeMappings": [
+        {
+          "node": {
+            "$ref": "#n:n0"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:1"
+              },
+              "fieldName": "Titulo"
+            },
+            {
+              "property": {
+                "$ref": "#p:9"
+              },
+              "fieldName": "Estreno"
+            },
+            {
+              "property": {
+                "$ref": "#p:10"
+              },
+              "fieldName": "Nota"
+            },
+            {
+              "property": {
+                "$ref": "#p:11"
+              },
+              "fieldName": "Sinopsis"
+            },
+            {
+              "property": {
+                "$ref": "#p:12"
+              },
+              "fieldName": "Duracion"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n4"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:4"
+              },
+              "fieldName": "Clasificacion"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n6"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:6"
+              },
+              "fieldName": "Pais"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n17"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:22"
+              },
+              "fieldName": "Idiomas"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n3"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:5"
+              },
+              "fieldName": "Productoras"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n2"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:7"
+              },
+              "fieldName": "Direccion"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n7"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:2"
+              },
+              "fieldName": "Genero1"
+            },
+            {
+              "property": {
+                "$ref": "#p:20"
+              },
+              "fieldName": "Genero2"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n5"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:3"
+              },
+              "fieldName": "Premios"
+            }
+          ]
+        },
+        {
+          "node": {
+            "$ref": "#n:n18"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [
+            {
+              "property": {
+                "$ref": "#p:14"
+              },
+              "fieldName": "Actor1"
+            },
+            {
+              "property": {
+                "$ref": "#p:15"
+              },
+              "fieldName": "Actor2"
+            },
+            {
+              "property": {
+                "$ref": "#p:16"
+              },
+              "fieldName": "Actor3"
+            },
+            {
+              "property": {
+                "$ref": "#p:17"
+              },
+              "fieldName": "Actor4"
+            },
+            {
+              "property": {
+                "$ref": "#p:18"
+              },
+              "fieldName": "Actor5"
+            },
+            {
+              "property": {
+                "$ref": "#p:19"
+              },
+              "fieldName": "Actor6"
+            }
+          ]
+        }
+      ],
+      "relationshipMappings": [
+        {
+          "relationship": {
+            "$ref": "#r:n14"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Direccion"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n13"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Pais"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n29"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Idiomas"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n12"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Productoras"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n16"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Genero1"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n11"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Clasificacion"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n15"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Direccion"
+          },
+          "toMapping": {
+            "fieldName": "Genero1"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n39"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Titulo"
+          },
+          "toMapping": {
+            "fieldName": "Premios"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n41"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Genero1"
+          },
+          "toMapping": {
+            "fieldName": "Premios"
+          }
+        },
+        {
+          "relationship": {
+            "$ref": "#r:n42"
+          },
+          "tableSchema": {
+            "$ref": "#t:1"
+          },
+          "propertyMappings": [],
+          "fromMapping": {
+            "fieldName": "Actor1"
+          },
+          "toMapping": {
+            "fieldName": "Titulo"
+          }
+        }
+      ]
+    },
+    "configurations": {
+      "idsToIgnore": []
+    },
+    "errors": {
+      "tableSchemaErrors": [],
+      "nodeErrors": [],
+      "relationshipErrors": []
+    }
+  }
+}
