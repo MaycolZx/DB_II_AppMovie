@@ -9,7 +9,7 @@ import session from '@/utils/neo4j'; // Importa el cliente Neo4j
 import neo4jDriver from '@/utils/neo4j';
 import NavBar from "@/components/Navbar";
 import FooterN from '@/components/footer'
-
+import OptionNeto from "@/components/OptionNeto";
 
 function HomePage(){
   //Check-Box
@@ -22,7 +22,9 @@ function HomePage(){
     if (newCheckedState) {
       try {
         const result = await session.run('MATCH (n) return n limit 10')
-        // const result = await session.run('MATCH (p:Pelicula)-[:CLASIFICADA_COMO]->(c:Clasificacion)WHERE cC1 IN ["PG", "PG-13"]RETURN p.P1 AS tituloPelicula, c.C1 AS clasificacion');
+        // const result = await session.run('MATCH (p:Pelicula)-[:CLASIFICADA_COMO]->(c:Clasificacion) WHERE c.C1 IN ["PG", "PG-13"] RETURN p.P1 AS tituloPelicula, c.C1 AS clasificacion');
+        console.log(result.records.map(record => record.get('n').properties))
+
         setResultData(result.records.map(record => record.get('n').properties));
       } catch (error) {
         console.error('Error fetching data from Neo4j:', error);
@@ -45,6 +47,7 @@ function HomePage(){
         <h1>Visualización del Grafo Neo4j</h1>
         <GraphVisualization containerId="graph-container" />
       </div> */}
+      <OptionNeto></OptionNeto>
       <div>
         <h1>Texto Ingresado:</h1>
         <TextInput onTextChange={handleTextChange} />
